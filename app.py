@@ -12,7 +12,11 @@ def chatbot():
         print("Sinto muito, Espero que o seu dia melhore!")
     else:
         print("Não entendi, mas espero que esteja tudo bem!")
-
+        
+    idade = int(input("Quantos anos você tem? "))
+    print("Muito bem!, tenho certeza que já é muito responsável pra sua idade!")
+    return idade
+        
 chatbot()
 
 
