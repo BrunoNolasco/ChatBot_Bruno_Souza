@@ -24,7 +24,8 @@ def escolha():
             
         elif escolha_usuario == "receita":
             print("Ótimo! Deixa eu te passar uma receita que eu adoro:")
-            
+            receita()
+            break
         else:
             print("Não entendi. Vamos tentar de novo?")
 
@@ -42,6 +43,60 @@ def jogo():
             break
         else:
             print("Não é isso. Tente de novo!")
+
+def receita():
+    resposta = input("Você que aprender a fazer pão de queijo ou bolo de cenoura?").strip().lower()
+    if resposta == "pão de queijo":
+        " \n \n "
+        print("Pão de queijo mineiro: \n "
+            " \n \n "
+            "Ingredientes: \n "
+            "2 xícaras de polvilho doce \n "
+            "1 xícara de leite \n "
+            "½ xícara de óleo \n "
+            "1 colher de chá de sal \n "
+            "1 ½ xícara de queijo ralado (meia cura ou parmesão) \n "
+            "2 ovos"
+            " \n \n "
+            "Modo de Preparo: \n "
+            "Aqueça o leite, o óleo e o sal até começar a ferver. \n "
+            "Despeje essa mistura quente sobre o polvilho e mexa bem até formar uma massa. \n "
+            "Deixe esfriar um pouco, junte os ovos e o queijo. \n "
+            "Misture bem com a mão até a massa ficar homogênea. \n "
+            "Modele bolinhas e coloque numa forma untada ou com papel manteiga. \n "
+            "Leve ao forno pré-aquecido a 180°C por 25-30 min, até dourar.) \n ")
+        
+    elif resposta == "bolo de cenoura":
+        " \n "
+        print("Bolo de cenoura com cobertura de chocolate: \n "
+            " \n "
+            "Ingredientes da massa: \n "
+            "3 cenouras médias (descascadas e picadas) \n "
+            "3 ovos \n "
+            "1 xícara de óleo \n "
+            "2 xícaras de açúcar \n "
+            "2 ½ xícaras de farinha de trigo \n "
+            "1 colher de sopa de fermento em pó \n "
+            " \n "
+            "Modo de Preparo da massa: \n "
+            "Bata no liquidificador: cenoura, ovos e óleo até ficar liso. \n "
+            "Transfira para uma tigela e misture o açúcar e a farinha. \n "
+            "Adicione o fermento por último, mexendo levemente. \n "
+            "Coloque numa forma untada e enfarinhada. \n "
+            "Asse em forno pré-aquecido a 180°C por 40-45 min. \n "
+            " \n "
+            "Cobertura de chocolate: \n "
+            "4 colheres de sopa de açúcar \n "
+            "2 colheres de sopa de chocolate em pó \n "
+            "2 colheres de sopa de manteiga \n "
+            "2 colheres de sopa de leite \n "
+            "Modo de Preparo da cobertura: \n "
+            "Misture tudo em uma panela e leve ao fogo baixo. \n "
+            "Mexa até engrossar um pouco (cerca de 5 min). \n "
+            "Jogue por cima do bolo ainda quente.")
+    else:
+        print("Não conheço essa receita. Tente de novo!")
+
 
 chatbot()
 escolha()
