@@ -47,9 +47,9 @@ def jogo():
 def receita():
     resposta = input("Você que aprender a fazer pão de queijo ou bolo de cenoura?").strip().lower()
     if resposta == "pão de queijo":
-        " \n \n "
+        " \n "
         print("Pão de queijo mineiro: \n "
-            " \n \n "
+            " \n "
             "Ingredientes: \n "
             "2 xícaras de polvilho doce \n "
             "1 xícara de leite \n "
@@ -57,7 +57,7 @@ def receita():
             "1 colher de chá de sal \n "
             "1 ½ xícara de queijo ralado (meia cura ou parmesão) \n "
             "2 ovos"
-            " \n \n "
+            " \n "
             "Modo de Preparo: \n "
             "Aqueça o leite, o óleo e o sal até começar a ferver. \n "
             "Despeje essa mistura quente sobre o polvilho e mexa bem até formar uma massa. \n "
@@ -97,104 +97,10 @@ def receita():
     else:
         print("Não conheço essa receita. Tente de novo!")
 
+def final():
+    print("Espero que você tenha gostado. Obrigado por usar o ChatBot!")
+
 
 chatbot()
 escolha()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#def obter_resposta(texto: str) -> str:
-#    comando: str = texto.lower()
-#
-#                #if comando in ('olá', 'boa tarde', 'bom dia'):
-#                #    return 'Olá tudo bem!'
-#                #if comando == 'como estás':
-#                #    return 'Estou bem, obrigado!'
-#                #if comando == 'como te chamas?':
-#                #    return 'O meu nome é: Bot :)'
-#                #if comando == 'tempo':
-#                #    return 'Está um dia de sol!'
-#                #if comando in ('bye', 'adeus', 'tchau'):
-#                #    return 'Gostei de falar contigo! Até breve...'
-#                #if 'horas' in comando:
-#                #    return f'São: {datetime.now():%H:%M} horas'
-#                #if 'data' in comando:
-#                #    return f'Hoje é dia: {datetime.now():%d-%m-%Y}'
-#           
-#                #return f'Desculpa, não entendi a questão! {texto}'
-#
-#    respostas = {
-#        ('olá', 'boa tarde', 'bom dia'): 'Olá tudo bem!',
-#        'como estás': 'Estou bem, obrigado!',
-#        ('bye', 'adeus', 'tchau'): 'Gostei de falar contigo! Até breve...',}
-#    for chave, resposta in respostas.items():
-#        if isinstance(chave, tuple):
-#            if comando in chave:
-#                return resposta
-#        elif chave in comando:
-#            return resposta
-#        return f'Desculpa, não entendi a questão! {texto}'
-#
-#
-#def chat() -> None:
-#    print('Bem-vindo ao ChatBot!')
-#    print('Escreva "bye" para sair do chat')
-#    name: str = input('Bot: Como te chamas? ')
-#    print(f'Bot: Olá, {name}! \n Como te posso ajudar?')
-#
-#    while True:
-#        user_input: str = input('Tu: ')
-#
-#        if resposta == 'Gostei de falar contigo! Até breve...':
-#            break
-#
-#    print('Chat acabou')
-#    print()
-#
-#
-#def main() -> None:
-#    os.system('cls' if os.name == 'nt' else 'clear')
-#    chat()
-#
-#
-#if __name__ == '__main__':
-#    main()
+final()
