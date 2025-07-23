@@ -1,18 +1,24 @@
 def chatbot():
-    nome = input("Olá! Qual o seu nome? ")
+
+    nome = input("Olá! Qual o seu nome? ").strip().capitalize()
     print(f"Prazer em te conhecer, {nome}!")
+    
+    while True:
+        humor = input("Como você está hoje? (bem/mal) ").strip().lower()
+        if humor == "bem":
+            print("Que ótimo! Espero que continue assim!")
+            break
+        
+        elif humor == "mal":
+            print("Sinto muito. Espero que o seu dia melhore!")
+            break
+        
+        else:
+            print("Não entendi, mas espero que esteja tudo bem!")
 
-    humor = input("Como você está hoje? (bem/mal) ").strip().lower()
-    if humor == "bem":
-        print("Que ótimo! Espero que continue assim!")
-    elif humor == "mal":
-        print("Sinto muito. Espero que o seu dia melhore!")
-    else:
-        print("Não entendi, mas espero que esteja tudo bem!")
-
-    idade = input("Quantos anos você tem? ")
-    print("Muito bem! Tenho certeza que já é muito responsável pra sua idade!")
-    return idade
+def idadeU():
+        idade = input("Quantos anos você tem? ")
+        print("Muito bem! Tenho certeza que já é muito responsável pra sua idade!")
 
 def escolha():
     while True:
@@ -65,7 +71,7 @@ def receita():
             "Misture bem com a mão até a massa ficar homogênea. \n "
             "Modele bolinhas e coloque numa forma untada ou com papel manteiga. \n "
             "Leve ao forno pré-aquecido a 180°C por 25-30 min, até dourar.) \n ")
-        
+
     elif resposta == "bolo de cenoura":
         " \n "
         print("Bolo de cenoura com cobertura de chocolate: \n "
@@ -102,5 +108,6 @@ def final():
 
 
 chatbot()
+idadeU()
 escolha()
 final()
