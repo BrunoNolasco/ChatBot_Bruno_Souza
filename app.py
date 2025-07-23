@@ -1,6 +1,3 @@
-import os
-from datetime import datetime
-
 def chatbot():
     nome = input("Olá! Qual o seu nome? ")
     print(f"Prazer em te conhecer, {nome}!")
@@ -9,36 +6,46 @@ def chatbot():
     if humor == "bem":
         print("Que ótimo! Espero que continue assim!")
     elif humor == "mal":
-        print("Sinto muito, Espero que o seu dia melhore!")
+        print("Sinto muito. Espero que o seu dia melhore!")
     else:
         print("Não entendi, mas espero que esteja tudo bem!")
-        
-    idade = int(input("Quantos anos você tem? "))
-    print("Muito bem!, tenho certeza que já é muito responsável pra sua idade!")
+
+    idade = input("Quantos anos você tem? ")
+    print("Muito bem! Tenho certeza que já é muito responsável pra sua idade!")
     return idade
-        
+
 def escolha():
-    escolhas = input("Você gastaria de jogar um jogo ou receber uma receita? (jogo/receita): ")
-    if escolhas == "jogo":
-        print("Ótimo, vamos jogar ""quem sou eu"".")
-    elif escolhas == "receita":
-        print("Ótimo, deixa eu te passar uma receita que eu adoro!")
-    else:
-        print("Não entendi, vamos tentar de novo? ")
-        
-def jogo(escolha = "jogo"):
-    print("escreva 'desisto' se desejar saber a resposta")
-    escolha = input("Na água nasci, na água me criei, mas se me jogarem na água, na água morrerei. Quem sou eu?").strip().lower()
-    if escolha == "sal" or "o sal" or "O sal" or "O Sal" or "Sal" or "o Sal":
-        print("Parabéns, você ganhou o jogo!")
-    elif escolha == "desisto" or "Desisto":
-        print("Ohh, não tem problema, essa era difícil mesmo, a resposta é 'O sal'. ")
-    else:
-        print("Não é isso, tente de novo! ")
-        
+    while True:
+        escolha_usuario = input("Você gostaria de jogar um jogo ou receber uma receita? (jogo/receita): ").strip().lower()
+        if escolha_usuario == "jogo":
+            print("Ótimo, vamos jogar 'Quem sou eu?'.")
+            jogo()
+            break
+            
+        elif escolha_usuario == "receita":
+            print("Ótimo! Deixa eu te passar uma receita que eu adoro:")
+            
+        else:
+            print("Não entendi. Vamos tentar de novo?")
+
+def jogo():
+    print("Escreva 'desisto' se desejar saber a resposta.")
+    
+    while True:
+        resposta = input("Na água nasci, na água me criei, mas se me jogarem na água, na água morrerei. Quem sou eu? ").strip().lower()
+
+        if resposta in ["sal", "o sal"]:
+            print("Parabéns, você ganhou o jogo!")
+            break
+        elif resposta == "desisto":
+            print("Ohh, não tem problema, essa era difícil mesmo. A resposta é 'o sal'.")
+            break
+        else:
+            print("Não é isso. Tente de novo!")
+
 chatbot()
 escolha()
-jogo(escolha)
+
 
 
 
