@@ -17,7 +17,17 @@ def chatbot():
     print("Muito bem!, tenho certeza que já é muito responsável pra sua idade!")
     return idade
         
+def escolha():
+    escolhas = input("Você gastaria de jogar um jogo ou receber uma receita? (jogo/receita): ")
+    if escolhas == "jogo":
+        print("Ótimo, vamos jogar ""quem sou eu"".")
+    elif escolhas == "receita":
+        print("Ótimo, deixa eu te passar uma receita que eu adoro!")
+    else:
+        print("Não entendi, vamos tentar de novo? ")
+        
 chatbot()
+escolha()
 
 
 
