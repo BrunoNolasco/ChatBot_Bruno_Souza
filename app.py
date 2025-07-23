@@ -26,8 +26,19 @@ def escolha():
     else:
         print("Não entendi, vamos tentar de novo? ")
         
+def jogo(escolha = "jogo"):
+    print("escreva 'desisto' se desejar saber a resposta")
+    escolha = input("Na água nasci, na água me criei, mas se me jogarem na água, na água morrerei. Quem sou eu?").strip().lower()
+    if escolha == "sal" or "o sal" or "O sal" or "O Sal" or "Sal" or "o Sal":
+        print("Parabéns, você ganhou o jogo!")
+    elif escolha == "desisto" or "Desisto":
+        print("Ohh, não tem problema, essa era difícil mesmo, a resposta é 'O sal'. ")
+    else:
+        print("Não é isso, tente de novo! ")
+        
 chatbot()
 escolha()
+jogo(escolha)
 
 
 
